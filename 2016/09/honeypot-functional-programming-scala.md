@@ -25,20 +25,20 @@ Features, concepts
 # Function:
 ### a mapping from input to output
 
-```
+```scala
 def sum(a: Int, b: Int): Int = a + b
 ```
 
 ### Is this stil a function?
-```
-    def sum(a: Int, b: Int): Int = {
-      println(s"summing $a and $b")
-      a + b
-    }
+```scala
+def sum(a: Int, b: Int): Int = {
+  println(s"summing $a and $b")
+  a + b
+}
 ```
 
 ### What about this?
-```
+```scala
 def sum(a: Int, b: Int): Int = {
   log.info(s"summing $a and $b")
   a + b
@@ -53,7 +53,7 @@ def sum(a: Int, b: Int): Int = {
 # No side effects
 
 ### No side effects
-```
+```scala
 def sum(a: Int, b: Int): (Int, String) =
   (a + b, s"summing $a and $b")
 ```
@@ -66,7 +66,7 @@ def sum(a: Int, b: Int): (Int, String) =
 ## Return errors explicitly
 
 ### Database access
-```
+```scala
 class Repo {
   def findUsers(firtName: String): List[User] = ???
 }
@@ -82,7 +82,7 @@ class Repo {
 ```
 
 ### Either (Scala API)
-```
+```scala
 class Repo {
   def findUsers(firtName: String): Throwable Xor List[User] = ???
 }
@@ -95,13 +95,13 @@ class Repo {
 ## functions that receive and / or return functions
 
 ### daily friends: `map`
-```
+```scala
 val nums = List(1, 2, 3)
 val doubled = nums.map(_ * 2)
 ```
 
 ### nested mapping
-```
+```scala
 class Repo {
   def findUser(email: String): Future[Either[Throwable, User]]
   def findFriends(user: User): Future[Either[Throwable, List[User]]]
@@ -111,31 +111,31 @@ val repo: Repo = ???
 ```
 
 ### what is the type of `friends`?
-```
+```scala
 val friends = repo.findUser(email).map { user =>
   repo.findFriends(user)
 }
 ```
 
 ### Nested futures!
-```
+```scala
 Future[Future[Either[Throwable, List[User]]]]
 ```
 
 ### what is the type of `friends`?
-```
+```scala
 val friends = repo.findUser(email).flatMap { user =>
   repo.findFriends(user)
 }
 ```
 
 ### Nested futures!
-```
+```scala
 Future[Either[Throwable, List[User]]]
 ```
 
 ### for comprehensions
-```
+```scala
 val friends = for {
   user <- repo.findUser(email)
   friends <- repo.frindFriends(user)
@@ -150,7 +150,7 @@ val friends = for {
 (including property testing)
 
 ### from ScalaCheck website
-```
+```scala
 property("startsWith") = forAll { (a: String, b: String) =>
   (a+b).startsWith(a)
 }
@@ -163,7 +163,7 @@ property("substring") = forAll { (a: String, b: String, c: String) =>
 ```
 
 ### from ScalaCheck website
-```
+```scala
 $ sbt test
 + String.startsWith: OK, passed 100 tests.
 ! String.concat: Falsified after 0 passed tests.
@@ -175,35 +175,35 @@ $ sbt test
 # Function composition
 
 ### First, a look at the `Function1` definition
-```
+```scala
 trait Function1[-T1, +R]
 ```
 (lets ignore the variance)
 
 ### `andThen`
-```
+```scala
 def andThen[A](g: (R) => A): (T1) => A
 ```
 
 ### two simple functions...
-```
+```scala
 def doubled(i: Int): Int = i * 2
 def addTwo(i: Int): Int = i + 2
 ```
 
 ### sequenced
-```
+```scala
 def doubleAndAdd(i: Int) = (doubled _ andThen addTwo)(i)
 ```
 
 ### function values
-```
+```scala
 val doubled = (i: Int) => i * 2
 val addTwo = (i: Int) => i + 2
 ```
 
 ### sequenced again
-```
+```scala
 val doubleAndAdd = doubled andThen addTwo
 ```
 
@@ -215,17 +215,17 @@ A def would work as well, but would be confusing due to the lack of declared par
 ```
 
 ### `compose`
-```
+```scala
 def compose[A](g: (A) => T1): (A) => R
 ```
 
 ### lets sequence again
-```
+```scala
 val doubledAndAdd = doubled compose addTwo
 ```
 
 ### what is the result?
-```
+```scala
 (doubled compose addTwo)(10)
 ```
 # What about data?
@@ -237,14 +237,14 @@ val doubledAndAdd = doubled compose addTwo
 ## ... and immutability
 
 ### a simplified `List`
-```
+```scala
 sealed trait List[+A]
 final case object Nil extends List[Nothing]
 final case class Cons[A](head: A, tail: List[A])
 ```
 
 ### recursive construction
-```
+```scala
 Cons(1, Cons(2, Cons(3, Nil))
 ```
 
@@ -264,22 +264,22 @@ Cons(1, Cons(2, Cons(3, Nil))
 # some old suspects
 
 # `Collection`s
-```
+```scala
 List(1,2,3).map(_ * 2)
 ```
 
 # `Option`s
-```
+```scala
 Option(42).map(v => s"The secret: $v")
 ```
 
 # Future
-```
+```scala
 Future { 42 }.map(v => s"I'm a secret from there future: $v")
 ```
 
 # Future: Repo
-```
+```scala
 class Repo {
   def findUser(email: String): Future[Either[Throwable, User]]
 }
@@ -296,7 +296,7 @@ repo.findUser(email).map(u => s"found user $u")
 ## config
 
 ## or any arbitrary function...
-```
+```scala
 type Reader[E,A] = E => A
 ```
 (naive version, from a non-scalaz guy)
@@ -309,7 +309,7 @@ https://gist.github.com/Mortimerp9/5384467
 (like logging and/or error messages)
 
 ## acumulates a series of functions that calculates values
-```
+```scala
 sealed trait Writer[W, A]
 ```
 (simplified, naive, from non scalaz guy again)
@@ -322,7 +322,7 @@ sealed trait Writer[W, A]
 ## gets messy with more then two monads
 
 ### back to the Repo
-```
+```scala
 class Repo {
   def findUser(email: String): Future[Either[Throwable, User]]
 }
@@ -330,7 +330,7 @@ class Repo {
 How to navigate that?
 
 ### can't do
-```
+```scala
 for {
   userEither <- repo.findUser(email)
   user <- userEither
@@ -339,7 +339,7 @@ for {
 different monads don't mix
 
 ### so need to...
-```
+```scala
 for {
   userEither <- repo.findUser(email)
   user <- userEither match {
