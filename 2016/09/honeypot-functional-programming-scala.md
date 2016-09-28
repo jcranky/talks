@@ -91,7 +91,7 @@ class Repo {
 
 # Next:
 ## high order functions
-## commonly used to determine if a given language is function
+## commonly used to determine if a given language is functional
 ## functions that receive and / or return functions
 
 ### daily friends: `map`
@@ -260,6 +260,7 @@ Cons(1, Cons(2, Cons(3, Nil))
 # Monads!
 
 ## one perspective: containers for data
+### you saw `map` and `flatMap`, that is almost all that is needed 
 
 # some old suspects
 
