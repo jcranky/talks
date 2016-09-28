@@ -143,7 +143,7 @@ val friends = for {
 ```
 
 ## FP Advantages:
-(an that is to name just a few)
+(and that is to name just a few)
 
 ## Thread-safe by nature
 ## easy to test
@@ -264,12 +264,12 @@ Cons(1, Cons(2, Cons(3, Nil))
 
 # some old suspects
 
-# `Collection`s
+# Collections
 ```scala
 List(1,2,3).map(_ * 2)
 ```
 
-# `Option`s
+# Options
 ```scala
 Option(42).map(v => s"The secret: $v")
 ```
