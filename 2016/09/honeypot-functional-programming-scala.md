@@ -12,7 +12,7 @@ Software Engineer at Zalando SE
 ## Agenda:
 A tour of functional programming via scala
 
-Features, concepts...
+Features, concepts
 ... and pointers for further studying
 
 # Pure ?!
@@ -31,10 +31,10 @@ def sum(a: Int, b: Int): Int = a + b
 
 ### Is this stil a function?
 ```
-def sum(a: Int, b: Int): Int = {
-  println(s"summing $a and $b")
-  a + b
-}
+    def sum(a: Int, b: Int): Int = {
+      println(s"summing $a and $b")
+      a + b
+    }
 ```
 
 ### What about this?
