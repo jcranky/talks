@@ -81,7 +81,7 @@ class Repo {
 }
 ```
 
-### Either (Scala API)
+### Xor (cats)
 ```scala
 class Repo {
   def findUsers(firtName: String): Throwable Xor List[User] = ???
