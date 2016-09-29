@@ -7,12 +7,15 @@ _Paulo "JCranky" Siqueira_ & _Matthew de Detrich_
 
 # In a really short summary:
 
-## schedule a bit messy and the website not very responsive
+### Bad things out of the way:
+* schedule a bit messy
+* website not very responsive
+
 ## great technical sessions
 _and most (if not all) were recorded, afaik_
 
 # Agenda
-## a quick overview of talks I saw
+## a quick overview of talks we saw
 ## mostly very briefly, to entice curiosity
 
 # Day 1
@@ -20,7 +23,6 @@ _and most (if not all) were recorded, afaik_
 _or something like that..._
 
 ## apparently was not the first time this talk was given
-## but was the first time I saw it
 _you should be able to find it around_
 
 ## about the dotty compiler inner works
@@ -28,18 +30,17 @@ _you should be able to find it around_
 #![Scala Compiler ER](https://c7.staticflickr.com/6/5785/29705384710_9c70e2cc77_z.jpg)
 
 ## take-aways
-## number of compiler phases is increasing... alot - _from 2x to 50+_
+## number of compiler phases is increasing... a lot - _from 2x to 50+_
 ## individual phases designed in a FP style
 
 
 ## Ron: Functional Databases (and Doobie)
 
-## some background before moving to Doobie
-## recursive data
-## some advanced terms to twist some minds
-## Fix and Cofree: "?"
-## Functor: "you can map"
-## traversable functors
+### he set the background with:
+* recursive data
+* Fix and Cofree: "?"
+* Functor: "you can map"
+* traversable functors
 
 ## Doobie: purely functional database
 
@@ -47,14 +48,14 @@ _you should be able to find it around_
 
 ## "doobie is a pure functional JDBC layer for Scala"
 
-## being teached at the https://www.scala-exercises.org/
+### being teached at the https://www.scala-exercises.org/
 
-## docs at https://tpolecat.github.io/doobie-0.2.0/00-index.html
+### docs at https://tpolecat.github.io/doobie-0.2.0/00-index.html
 
 
 # Olafur: scala.meta workshop
 ## didn't work for me, serious network issues
-## https://olafurpg.github.io/scala.meta-workshop/
+### https://olafurpg.github.io/scala.meta-workshop/
 
 
 # Raul: Run free
@@ -70,40 +71,52 @@ _you should be able to find it around_
 
 # Tim Perret: Enterprise Algebra
 ## from the title, I would guess a simple talk
-## one of the most advanced ones from the whole conference
-## github.com/verizon
+## one of the most advanced talks from the whole conference
+### https://github.com/verizon
 ## sbt: automate all the things
 #![Verizon Repos](https://c3.staticflickr.com/9/8543/29371657034_735eb5bcd5_k.jpg)
-## java refugees
-# to think about
-## free / coyonadas
-## functors (one more talk with it)
-## type lambdas?
-## nomad monads?
+
+### to think about
+* free / coyonadas
+* functors (again)
+* type lambdas "?"
+* nomad monads "?"
 
 
-# Heiko Seeberger: Akka Streams
-## I don't really use akka streams
-## so I couldn't follow too much
+## Heiko Seeberger: Akka Streams
+
+### I don't really use akka streams, so I couldn't follow too much
+
 ## showed lots of code
 (but most of the code seemed a bit too complex or too full of boilerplate)
 
 
-# Roland Kuhn: Distributed Vs. Composed
+## Roland Kuhn: Distributed Vs. Composed
+
 ## designed to be a bit controversial
-## tried to mathematically justify the actor model
+
+## mathematically justify the actor model
 (which was a bit complex but pretty cool)
+
 ## PI calculus
+
 ## lots of math, head hurting at some points...
 (lack of beer?)
+
 ## protocols for interprocess / actor communication
 (focused but not exclusive for actors)
+
 ## mapping from PI calculus to the actor model
+
+![PI Calculus](https://c3.staticflickr.com/6/5323/29371652434_0c7454b6c0_k.jpg)
+
 ## research somehow touching typed actors?
-## showed some future code to be in the akka implementation
+
+### showed some future code to be in the akka implementation
 (part of it still only in a PR from him for now)
-```CODE```
+
 ## alternative for free monads in the future?
+
 ## everything really experimental for now
 
 
@@ -114,7 +127,7 @@ _you should be able to find it around_
 
 # Day 2
 
-# Dick Wall / Josh Suereth: For: what is it good for?
+## Dick Wall / Josh Suereth: For: what is it good for?
 ## fun and light, a good "break"
 ## ended with some more advanced concepts
 ## bottom-line:
