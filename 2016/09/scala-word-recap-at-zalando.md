@@ -34,7 +34,7 @@ _you should be able to find it around_
 ## individual phases designed in a FP style
 
 
-## Ron: Functional Databases (and Doobie)
+## Rob Norris: Functional Databases (and Doobie)
 
 ### he set the background with:
 * recursive data
