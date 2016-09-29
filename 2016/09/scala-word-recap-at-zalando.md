@@ -53,7 +53,7 @@ _you should be able to find it around_
 ### docs at https://tpolecat.github.io/doobie-0.2.0/00-index.html
 
 
-# Olafur: scala.meta workshop
+## Olafur: scala.meta workshop
 ## didn't work for me, serious network issues
 ### https://olafurpg.github.io/scala.meta-workshop/
 
@@ -108,7 +108,7 @@ _you should be able to find it around_
 
 ## mapping from PI calculus to the actor model
 
-![PI Calculus](https://c3.staticflickr.com/6/5323/29371652434_0c7454b6c0_k.jpg)
+#![PI Calculus](https://c3.staticflickr.com/6/5323/29371652434_0c7454b6c0_k.jpg)
 
 ## research somehow touching typed actors?
 
@@ -128,47 +128,72 @@ _you should be able to find it around_
 # Day 2
 
 ## Dick Wall / Josh Suereth: For: what is it good for?
-## fun and light, a good "break"
-## ended with some more advanced concepts
-## bottom-line:
-# "for is not a loop"
-## -Xprint:parser -> show parsed / de-sugarized fors
-```CODE```
-## -Xshow-phases  -> print the compiler phases
-```CODE```
-## inline assignments
+### fun and light, a good "break", ended with some more advanced concepts
+
+## bottom-line: _"for is not a loop"_
+
+### `-Xprint:parser` -> show parsed / de-sugarized fors
+
+### `-Xshow-phases`  -> print the compiler phases
+
+### inline assignments
+
 ```_ = println("some logging")```
+
 (quick tip for debuging)
-##(who uses println for debuggin, right?)
-## for == Monad + withFilter stuff
+
+### (who uses println for debugging, right?)
+
+### for == Monad + withFilter stuff
+
 ## monads dont mix
-## "the essence of the iterator pattern" paper
-## off
-# StateMonad
-# Emm
-# Sinks
-# Comonads
+
+### _"the essence of the iterator pattern"_ paper
+
+### off
+* StateMonad
+* Emm
+* Sinks
+* Comonads
 
   
-# Phillip Haller - safer concurrency
-## LaCasa library
-## boxing of mutable state
-## sending boxes around
-## "continuation passing"
-## consumable permissions
-## intermezzo spores
+## Phillip Haller - safer concurrency
+### LaCasa library
+* boxing of mutable state
+* sending boxes around
+* "continuation passing"
+* consumable permissions
+* intermezzo spores
 
 
-## Lukas Rytz - Tales from compiling to the JVM
+### Lukas Rytz - Tales from compiling to the JVM
+
 ## development of the scala 2.12 compiler
-## new jvm features
-## invoke dynamics
-## invoke special
-## default methods on java interfaces
+
+## using new jvm features
+* invoke dynamics
+* invoke special
+* default methods on java interfaces
+
 ## one puzzler:
+
+### what is printed?
+```
+def printInt(x: Int) = println(x)
+
+println(null.asInstanceOf[Int])
+printInt(null.asInstanceOf[Int])
+```
+
+### ah ha!
+```
+def printInt(x: Int) = println(x)
+
+println(null.asInstanceOf[Int])     // null
+printInt(null.asInstanceOf[Int])    // 0
+```
+
 ## java / scala boxing is slightly different
-(mention the non-nulable scala primitive that gets null from Java and turns it into 0 ?)
-(if I can reproduce the error...)
 
 
 # Manohor - Staged Parser Combinators
@@ -177,58 +202,48 @@ _you should be able to find it around_
 (implemented with macros)
 ## multi-stage programming / parser processing
 ## each parser combinator can run in a different stage / phase
-## fill the gaps possible in each stage, fill Rep[T] in the rest
+### fill the gaps possible in each stage, fill `Rep[T]` in the rest
 ## research from EPFL, done, full implementation missing / to come
 
 
-# Dmitry: Complexity: Accidental and Essential
+## Dmitry: Complexity: Accidental and Essential
+
 ## a few scala puzzlers
-## (mention the scala puzzlers book here)
+
+(Look for the _Scala Puzzlers_ book)
+
 ## Option to remove Predef?
 (I couldn't find it though...)
+
 ## dotty will help remove some problems
+
 ## others can't really be removed
 (to avoid breaking the community too much)
-# possible victimns:
-## type projection
-## structural types
-## implicit (tuple1 -> Unit) will die
+
+## possible victimns:
+* type projection
+* structural types
+* implicit (tuple1 -> Unit) will die
+* auto-tupling should die, but wont
+* some frameworks (like) uses it heavily - including the stdlib  
+
 ## ```DelayedInit```
-## DelayedInit: super lambda from the body
-## lots of compiler magic required
-## is already deprecated and **will die**
-## new DelayedInit will come, using the new feature that allows traits to take params
-## and with no special compiler support
-## auto-tupling should die, but wont
-(code sample here)
-## some frameworks (like) uses it heavily - including the stdlib  
+* super lambda from the body
+* lots of compiler magic required
+* is already deprecated and **will die**
+
+## new `DelayedInit` will come
+* new feature that allows traits to take params
+* no special compiler support
 
 
-# Conclusions
-# Main take aways
+## Conclusions / take aways
+
 ## there is still LOTs to learn about scala
-(hence the *crazy terms* briefly mentioned)
+
+(hence the *crazy terms* briefly mentioned everywhere)
+
 ## the scala ecosystem **IS** evolving
+
 ## **2.12** and **dotty** are going to be cool *:D*
-
-
-
-
------ Tech Talk Sent / Details:
-
-title: Scala World Recap
-speaker: internal
-duration: 30 minutes
-speaker: Paulo Renato Campos de Siqueira
-team: Team Glitch
-
-description: I had the opportunity to attend Scala World, an advanced but fun conference nonetheless. Lets have a tour around what was there to be seen.
-
-device: windows / ubuntu
-
-location: BMO
-
-link to edit the form:
-
-https://docs.google.com/a/zalando.de/forms/d/e/1FAIpQLScjQUyoWM1bIpWchzo5IAg6TQauN57AJwRk2XcrG60eqy_BZg/viewform?edit2=2_ABaOnuePH3bYbIhMP0huNcy2pwkdHmPG7qPzItFI2-RVywhlh-Z-Exd-XMOG
-
+(2.12 includes some backported features from dotty)
