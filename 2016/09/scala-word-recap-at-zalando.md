@@ -114,6 +114,8 @@ _you should be able to find it around_
 
 ## designed to be a bit controversial
 
+### _"Formalizing entire distributed systems is really hard, instead we formalize process communication"_
+
 ## mathematically justify the actor model
 (which was a bit complex but pretty cool)
 
