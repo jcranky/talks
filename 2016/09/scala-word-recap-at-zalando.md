@@ -12,7 +12,10 @@ _Paulo "JCranky" Siqueira_ & _Matthew de Detrich_
 * website not very responsive
 
 ## great technical sessions
+
 _and most (if not all) were recorded, afaik_
+
+https://www.youtube.com/scalaworld
 
 # Agenda
 ## a quick overview of talks we saw
@@ -219,6 +222,17 @@ printInt(null.asInstanceOf[Int])    // 0
 ### fill the gaps possible in each stage, fill `Rep[T]` in the rest
 ## research from EPFL, done, full implementation missing / to come
 
+### Vlad Ureche: Miniboxing Library
+
+https://scala-miniboxing.org
+
+### A scala compiler plugin to overcome limitations of current specialization
+
+```scala
+@specialized
+```
+
+### mini boxing isn't perfect: all dependencies must be compiled with support for it
 
 ## Dmitry: Complexity: Accidental and Essential
 
