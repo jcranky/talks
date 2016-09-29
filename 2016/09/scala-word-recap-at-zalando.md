@@ -11,6 +11,8 @@ _Paulo "JCranky" Siqueira_ & _Matthew de Detrich_
 * schedule a bit messy
 * website not very responsive
 
+#![Mobile Site](http://i.imgur.com/q1HOfEP.png)
+
 ## great technical sessions
 
 _and most (if not all) were recorded, afaik_
