@@ -224,8 +224,12 @@ printInt(null.asInstanceOf[Int])    // 0
 * type projection
 * structural types
 * implicit (tuple1 -> Unit) will die
-* auto-tupling should die, but wont
-* some frameworks (like) uses it heavily - including the stdlib  
+
+### auto-tupling should die, but wont
+
+* some frameworks (like) uses it heavily - including the stdlib
+
+`println(1, 2)`
 
 ## ```DelayedInit```
 * super lambda from the body
