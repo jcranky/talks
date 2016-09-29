@@ -22,7 +22,7 @@ _and most (if not all) were recorded, afaik_
 ## Martin Odersky: "Compiler as an in-memory database"
 _or something like that..._
 
-## apparently was not the first time this talk was given
+## not the first time this talk was given
 _you should be able to find it around_
 
 ## about the dotty compiler inner works
@@ -82,6 +82,20 @@ _you should be able to find it around_
 * type lambdas "?"
 * nomad monads "?"
 
+## Christopher Vogt: CBT 
+
+### a new build for scala
+
+### Simplicity
+* builds defined as basic class inheritance
+* plugins defined as traits
+
+### fast interactive performance
+* runs in nailgun
+* custom maven resolver
+
+### ready for basic usage
+(missing plugins from community)
 
 ## Heiko Seeberger: Akka Streams
 
