@@ -224,14 +224,22 @@ printInt(null.asInstanceOf[Int])    // 0
 ## java / scala boxing is slightly different
 
 
-# Manohor - Staged Parser Combinators
+## Manohar - Staged Parser Combinators
+(similar to _fastparse_)
+
 ## composition of parsers
+
 ## ParseQuery
 (implemented with macros)
+
 ## multi-stage programming / parser processing
+
 ## each parser combinator can run in a different stage / phase
+
 ### fill the gaps possible in each stage, fill `Rep[T]` in the rest
+
 ## research from EPFL, done, full implementation missing / to come
+
 
 ### Vlad Ureche: Miniboxing Library
 
