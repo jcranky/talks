@@ -234,6 +234,23 @@ https://scala-miniboxing.org
 
 ### mini boxing isn't perfect: all dependencies must be compiled with support for it
 
+## Denys Shabalin: Managed Resources
+
+### handling resources lifetimes via implicits
+Twenty minutes implementing a design pattern for auto closing resources
+
+```scala
+object MyApp extends App {
+  Scope { implicit in =>
+    val w1 = new SafeWriter("file1.txt")
+    w1.write("hello, world!")
+
+    val w2 = new SafeWriter("file2.txt")
+    w2.write("hello, world!")
+  }
+}
+```
+
 ## Dmitry: Complexity: Accidental and Essential
 
 ## a few scala puzzlers
