@@ -1,5 +1,5 @@
 
-# Scala World 2016 - a Recap
+### Scala World 2016 - a Recap
 
 _Paulo "JCranky" Siqueira_ & _Matthew de Detrich_
 ![Rheged Centre Entrance](https://c4.staticflickr.com/9/8631/29999124355_b0a4357da2_k.jpg)
