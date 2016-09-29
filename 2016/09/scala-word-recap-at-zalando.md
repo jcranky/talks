@@ -183,6 +183,17 @@ _you should be able to find it around_
 * intermezzo spores
 
 
+## Aleksandar Prokopec: First class coroutines for scala
+
+### alternate style of concurrency based on suspencion / resumable "threads"
+(i.e. `yield`)
+
+* _implemented as a macro_: `scala-async`
+* interops with futures seamlessly
+* and thus works in for comprehensions
+* a different formalization of CSP (communicating sequential processes)
+
+
 ### Lukas Rytz - Tales from compiling to the JVM
 
 ## development of the scala 2.12 compiler
