@@ -1,4 +1,7 @@
 
+<!--See it in action at:-->
+<!--http://deckdown.org/deck?src=https://raw.githubusercontent.com/jcranky/talks/master/2016/09/scala-word-recap-at-zalando.md-->
+
 ### Scala World 2016 - a Recap
 
 _Paulo "JCranky" Siqueira_ & _Matthew de Detrich_
