@@ -5,7 +5,7 @@
 <!--
 See it in action:
 - clone https://github.com/hakimel/reveal.js
-- the the contents from presentation.html into reveal's index.html
+- copy the contents from presentation.html into reveal's index.html
 - symlink this md file, and the imgs folder into reveal's root folder
 - follow reveal's full setup instructions at https://github.com/hakimel/reveal.js#full-setup 
 -->
