@@ -1,6 +1,6 @@
 
 <!--Meetup Info:-->
-<!--https://www.meetup.com/pt-BR/Honeypot/events/233936294/-->
+<!--https://www.meetup.com/Honeypot/events/233936294/-->
 
 <!--See it in action at:-->
 <!--http://deckdown.org/deck?src=https://raw.githubusercontent.com/jcranky/talks/master/2016/09/honeypot-functional-programming-scala.md-->
